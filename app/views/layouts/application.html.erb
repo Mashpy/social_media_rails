@@ -8,10 +8,37 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="flex items-center justify-around flex-wrap bg-white p-6 shadow-md">
+      <div class="flex items-center flex-shrink-0 text-gray-800 mr-6 cursor-pointer">
+        <img src="https://i.ibb.co/KySZGdq/nt-ui-angular-src-assets-Logo-Pixelgram.png" alt="">
+      </div>
+      <div class="text-sm w-64 mr-32">
+        <input class="bg-gray-100 focus:outline-none focus:shadow-outline border border-gray-400 rounded py-1 px-4 block w-full appearance-none leading-normal" type="text" placeholder="Search">
+      </div>
+      <div>
+        <i class="far fa-user text-lg cursor-pointer"></i>
+      </div>
+    </nav>
+
+
+    <div class="container mx-auto my-10 sm:px-20  flex justify-center">
+        <%= yield %>
+      <!--   Social Connections -->
+      <div class="social-icons">
+        <a class="social-icon social-icon--codepen" href="https://codepen.io/braydoncoyer" target="_blank">
+          <i class="fa fa-codepen"></i>
+          <div class="tooltip">Codepen</div>
+        </a>
+        <a class="social-icon social-icon--twitter" href="https://twitter.com/BraydonCoyer" target="_blank">
+          <i class="fa fa-twitter"></i>
+          <div class="tooltip">Twitter</div>
+        </a>
+      </div>
+    </div>
+
   </body>
 </html>
